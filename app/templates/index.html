@@ -1,4 +1,5 @@
 {% load static %}
+{% load timetags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +47,7 @@
 						        <td class="column2">{{r.pointid}}</td>
 						        <td class="column3">{{r.value}}</td>
 						        <td class="column4">{{r.flags}}</td>
-						        <td class="column5">{{r.timetag}}</td>
+						        <td class="column5">{{r.timetag|print_timestamp}}</td>
 						        <td class="column6">{{r.datatype}}</td>
 						      </tr>
 						    {% endfor %}
